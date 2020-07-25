@@ -9,10 +9,10 @@ public class Executor {
         Singleton singleton1 = Singleton.getInstance();
         System.out.println(singleton.equals(singleton1));
         Parcel.Builder parcel = new Parcel.Builder()
-                .setSender("Vasya")
-                .setRecipient("Katya")
-                .setIdentity(12425251)
-                .setWeight(12.45);
+                .sender("Vasya")
+                .recipient("Katya")
+                .identity(12425251)
+                .weight(12.45);
         System.out.println("\n" + parcel);
     }
 }
