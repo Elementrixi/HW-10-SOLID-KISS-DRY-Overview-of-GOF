@@ -12,7 +12,7 @@ public class Executor {
                 .sender("Vasya")
                 .recipient("Katya")
                 .identity(12425251)
-                .weight(12.46);
+                .weight(12.45);
         System.out.println("\n" + parcel);
     }
 }
