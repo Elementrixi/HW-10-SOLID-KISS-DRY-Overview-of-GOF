@@ -5,13 +5,14 @@ import main.java.com.alpashaev.singleton.Singleton;
 
 public class Executor {
     public static void solvingHomework() {
-        Singleton.getInstance(22);
-        System.out.println(Singleton.value);
+        Singleton singleton = Singleton.getInstance();
+        Singleton singleton1 = Singleton.getInstance();
+        System.out.println(singleton.equals(singleton1));
         Parcel.Builder parcel = new Parcel.Builder()
-                .sender("Vasya")
-                .recipient("Katya")
-                .identity(325023501)
-                .weight(12.34);
+                .setSender("Vasya")
+                .setRecipient("Katya")
+                .setIdentity(12425251)
+                .setWeight(12.45);
         System.out.println("\n" + parcel);
     }
 }
