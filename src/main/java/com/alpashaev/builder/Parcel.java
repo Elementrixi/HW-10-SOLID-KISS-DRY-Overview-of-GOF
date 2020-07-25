@@ -1,26 +1,10 @@
 package main.java.com.alpashaev.builder;
 
 public class Parcel {
-    private static String sender;
-    private static String recipient;
-    private static int parcelId;
-    private static double weightInKg;
-
-    public String getSender() {
-        return sender;
-    }
-
-    public String getRecipient() {
-        return recipient;
-    }
-
-    public int getIdentity() {
-        return parcelId;
-    }
-
-    public double getWeight() {
-        return weightInKg;
-    }
+    private String sender;
+    private String recipient;
+    private int parcelId;
+    private double weightInKg;
 
     public static class Builder {
         private Parcel newParcel;
@@ -39,8 +23,8 @@ public class Parcel {
             return this;
         }
 
-        public Builder identity(int id) {
-            newParcel.parcelId = id;
+        public Builder identity(int parcelId) {
+            newParcel.parcelId = parcelId;
             return this;
         }
 
@@ -52,10 +36,10 @@ public class Parcel {
         @Override
         public String toString() {
             return "Parcel{" +
-                    "sender : " + sender +
-                    ", recipient : " + recipient +
-                    ", parcel id = " + parcelId +
-                    ", weight in kg = " + weightInKg +
+                    "sender : " + newParcel.sender +
+                    ", recipient : " + newParcel.recipient +
+                    ", parcel id = " + newParcel.parcelId +
+                    ", weight in kg = " + newParcel.weightInKg +
                     '}';
         }
     }
